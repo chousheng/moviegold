@@ -12,6 +12,11 @@ RUN curl -sL https://deb.nodesource.com/setup_18.x | bash && \
     npm install -g npm \
     apt-get clean;
 
+# Install vim
+RUN apt-get update && \ 
+    apt-get install -y vim && \
+    apt-get clean;
+
 # Install ping, dnsutils, and telent
 RUN apt-get update && \ 
     apt-get install -y iputils-ping dnsutils telnet && \
