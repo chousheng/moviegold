@@ -1,0 +1,23 @@
+services:
+  workspace:
+    build: .
+    volumes:
+      - ../..:/workspaces:cached
+    command: sleep infinity
+
+  db:
+    image: mongo:6
+    ports:
+      - "27017:27017"
+    restart: unless-stopped
+    volumes:
+      - mongodb-data-db:/data/db
+      - mongodb-data-configdb:/data/configdb
+    # environment:
+    #  MONGO_INITDB_ROOT_USERNAME: root
+    #  MONGO_INITDB_ROOT_PASSWORD: example
+    #  MONGO_INITDB_DATABASE: your-database-here
+
+volumes:
+  mongodb-data-db:
+  mongodb-data-configdb:
