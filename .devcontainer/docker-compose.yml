@@ -13,10 +13,10 @@ services:
     volumes:
       - mongodb-data-db:/data/db
       - mongodb-data-configdb:/data/configdb
-    # environment:
-    #  MONGO_INITDB_ROOT_USERNAME: root
-    #  MONGO_INITDB_ROOT_PASSWORD: example
-    #  MONGO_INITDB_DATABASE: your-database-here
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=root
+      - MONGO_INITDB_ROOT_PASSWORD=example
+    # - MONGO_INITDB_DATABASE=your-database-here
 
 volumes:
   mongodb-data-db:
