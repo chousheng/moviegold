@@ -5,6 +5,7 @@
 	"dockerComposeFile": "docker-compose.yml",
 	"service": "workspace",
 	"workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+	"shutdownAction": "stopCompose",
 
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	"features": {
@@ -21,6 +22,9 @@
 	// Use 'postCreateCommand' to run commands after the container is created.
 	// "postCreateCommand": "java -version",
 
+	// Fix git "dubious ownership" error
+	"postStartCommand": "git config --global --add safe.directory ${containerWorkspaceFolder}",
+
 	// Configure tool-specific properties.
 	"customizations": {
 		// Configure properties specific to VS Code.
@@ -34,8 +38,13 @@
 				"mongodb.mongodb-vscode" // MongoDB for VS Code
 			]
 		}
-	}
+	},
 
 	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
 	// "remoteUser": "root"
+
+	// Sync container timezone with the host
+	"mounts": [
+		"type=bind,readonly,source=/etc/localtime,target=/etc/localtime"
+	]
 }
