@@ -21,3 +21,10 @@ RUN apt-get update && \
 RUN apt-get update && \ 
     apt-get install -y iputils-ping dnsutils telnet && \
     apt-get clean;
+
+# Install mongodb-mongosh mongodb-org-tools
+RUN wget -qO- https://www.mongodb.org/static/pgp/server-6.0.asc | tee /etc/apt/trusted.gpg.d/mongodb.asc && \
+    echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu jammy/mongodb-org/6.0 multiverse" | tee /etc/apt/sources.list.d/mongodb-org-6.0.list && \
+    apt-get update && \
+    apt-get install -y mongodb-mongosh && \
+    apt-get install -y mongodb-org-tools;
