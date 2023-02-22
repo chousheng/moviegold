@@ -6,6 +6,7 @@
 	"service": "workspace",
 	"workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
 	"shutdownAction": "stopCompose",
+	"waitFor": "postStartCommand", 
 
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	"features": {
