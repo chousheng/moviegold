@@ -9,12 +9,12 @@
 	"waitFor": "postStartCommand", 
 
 	// Features to add to the dev container. More info: https://containers.dev/features.
-	"features": {
-		"ghcr.io/devcontainers/features/java:1": {
-			"version": "17",
-			"installMaven": true
-		}
-	},
+	//"features": {
+	//	"ghcr.io/devcontainers/features/java:1": {
+	//		"version": "17",
+	//		"installMaven": true
+	//	}
+	//},
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// This can be used to network with other containers or with the host.
@@ -31,7 +31,15 @@
 		// Configure properties specific to VS Code.
 		"vscode": {
 			// Set *default* container specific settings.json values on container create.
-			"settings": {},
+			"settings": {
+				// Workaround for vscode-java extension not hornoring JAVA_HOME if the extension's built-in Java version happened to be the same
+				"java.configuration.runtimes": [
+					{
+						"name": "JavaSE-17", // Must match the version of the path below
+						"path": "/usr/lib/jvm/java-17-openjdk-amd64" // Hardcoded for now (TODO)
+					} 
+				]
+			},
 			"extensions": [
 				"vscjava.vscode-java-pack", // Extension Pack for Java
 				"vmware.vscode-boot-dev-pack", // Spring Boot Extension Pack
