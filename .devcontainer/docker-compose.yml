@@ -4,6 +4,11 @@ services:
     volumes:
       - ../..:/workspaces:delegated
     command: sleep infinity
+    environment:
+      - MONGO_HOST=db
+      - MONGO_USERNAME=root
+      - MONGO_PASSWORD=example
+      - MONGO_DATABASE=movies-api-db
 
   db:
     image: mongo:6
@@ -13,10 +18,11 @@ services:
     volumes:
       - mongodb-data-db:/data/db
       - mongodb-data-configdb:/data/configdb
+      - ../db:/docker-entrypoint-initdb.d # Seeding the database
     environment:
       - MONGO_INITDB_ROOT_USERNAME=root
       - MONGO_INITDB_ROOT_PASSWORD=example
-    # - MONGO_INITDB_DATABASE=your-database-here
+      - MONGO_INITDB_DATABASE=movies-api-db
 
 volumes:
   mongodb-data-db:

@@ -1,9 +1,11 @@
-#!/usr/bin/env sh
+#!/usr/bin/env bash
 
-# Read .env
-set -o allexport
-. ../.env
-set +o allexport
+SCRIPT_DIR=$(dirname $BASH_SOURCE)
+
+USERNAME=${MONGO_USERNAME:-$MONGO_INITDB_ROOT_USERNAME}
+PASSWORD=${MONGO_PASSWORD:-$MONGO_INITDB_ROOT_PASSWORD}
+HOST=${MONGO_HOST:-localhost}
+DATABASE=${MONGO_DATABASE:-$MONGO_INITDB_DATABASE}
 
 # Seed the database
-mongoimport --uri mongodb://$MONGO_USER:$MONGO_PASSWORD@$MONGO_CLUSTER --authenticationDatabase admin --db $MONGO_DATABASE --collection movies --file=movies.json --jsonArray --drop
+mongoimport --uri mongodb://${USERNAME}:${PASSWORD}@${HOST} --authenticationDatabase admin --db ${DATABASE} --collection movies --file=${SCRIPT_DIR}/movies.json --jsonArray --drop
