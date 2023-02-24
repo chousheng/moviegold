@@ -3,7 +3,6 @@ services:
     build: .
     volumes:
       - ../..:/workspaces:delegated
-    command: sleep infinity
     environment:
       - MONGO_HOST=db
       - MONGO_USERNAME=root
@@ -12,9 +11,6 @@ services:
 
   db:
     image: mongo:6
-    ports:
-      - "27017:27017"
-    restart: unless-stopped
     volumes:
       - mongodb-data-db:/data/db
       - mongodb-data-configdb:/data/configdb
@@ -23,6 +19,9 @@ services:
       - MONGO_INITDB_ROOT_USERNAME=root
       - MONGO_INITDB_ROOT_PASSWORD=example
       - MONGO_INITDB_DATABASE=movies-api-db
+    ports:
+      - "27017:27017"
+    restart: unless-stopped
 
 volumes:
   mongodb-data-db:

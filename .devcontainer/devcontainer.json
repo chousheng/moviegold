@@ -37,12 +37,12 @@
 				//"java.configuration.runtimes": [
 				//	{
 				//		"name": "JavaSE-17", // Must match the version of the path below
-				//		"path": "/usr/lib/jvm/java-17-openjdk-amd64" // Hardcoded for now (TODO)
+				//		"path": "/usr/lib/jvm/java-17" // Hardcoded for now (TODO)
 				//	} 
 				//]
-				"java.sharedIndexes.enabled":"on",
-				"java.jdt.ls.java.home": "/usr/lib/jvm/java-17-openjdk-amd64" // For both the Java language server and the default project JDK
-				//"spring-boot.ls.java.home": "/usr/lib/jvm/java-17-openjdk-amd64" // For Spring Boot language server
+				"java.sharedIndexes.enabled": "on",
+				"java.jdt.ls.java.home": "/usr/lib/jvm/java-17" // For both the Java language server and the default project JDK
+				//"spring-boot.ls.java.home": "/usr/lib/jvm/java-17" // For Spring Boot language server
 			},
 			"extensions": [
 				// Intellicode
