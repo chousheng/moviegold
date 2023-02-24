@@ -1,9 +1,16 @@
 FROM mcr.microsoft.com/devcontainers/base:ubuntu-22.04
 
-# Install OpenJDK 17 and Maven
+# Unminimize to be able to use man pages
+RUN yes | unminimize
+
+# Install vim, ping, dnsutils, and telent
+RUN apt-get update && \ 
+    apt-get install -y vim iputils-ping dnsutils telnet && \
+    apt-get clean;
+
+# Install OpenJDK 17
 RUN apt-get update && \
     apt-get install -y openjdk-17-jdk-headless && \
-    apt-get install -y maven && \
     apt-get clean && \
     echo 'export JAVA_HOME='$(echo /usr/lib/jvm/java-17-openjdk*) >> /etc/profile.d/jdk.sh && \
     echo 'export PATH=$JAVA_HOME/bin:$PATH' >> /etc/profile.d/jdk.sh && \
@@ -13,16 +20,6 @@ RUN apt-get update && \
 RUN curl -sL https://deb.nodesource.com/setup_18.x | bash && \
     apt-get install -y nodejs && \
     npm install -g npm \
-    apt-get clean;
-
-# Install vim
-RUN apt-get update && \ 
-    apt-get install -y vim && \
-    apt-get clean;
-
-# Install ping, dnsutils, and telent
-RUN apt-get update && \ 
-    apt-get install -y iputils-ping dnsutils telnet && \
     apt-get clean;
 
 # Install mongodb-mongosh and mongodb-org-tools

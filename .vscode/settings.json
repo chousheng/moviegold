@@ -1,7 +1,13 @@
 {
+    // General
+    "extensions.ignoreRecommendations": true,
+    "debug.toolBarLocation": "docked",
+
+    // Java
     "java.compile.nullAnalysis.mode": "automatic",
     "java.configuration.updateBuildConfiguration": "automatic",
-    "debug.toolBarLocation": "docked",
+
+    // Thunder Client
     "thunder-client.saveToWorkspace": true,
     "thunder-client.sidebar.defaultTab": "Collections"
 }

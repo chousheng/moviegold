@@ -32,6 +32,7 @@
 		"vscode": {
 			// Set *default* container specific settings.json values on container create.
 			"settings": {
+				// Java
 				// Workaround for vscode-java extension not hornoring JAVA_HOME if the extension's built-in Java version happened to be the same
 				//"java.configuration.runtimes": [
 				//	{
@@ -40,16 +41,37 @@
 				//	} 
 				//]
 				"java.sharedIndexes.enabled":"on",
-				"java.jdt.ls.java.home": "/usr/lib/jvm/java-17-openjdk-amd64", // For both the Java language server and the default project JDK
-				"spring-boot.ls.java.home": "/usr/lib/jvm/java-17-openjdk-amd64" // For Spring Boot language server
+				"java.jdt.ls.java.home": "/usr/lib/jvm/java-17-openjdk-amd64" // For both the Java language server and the default project JDK
+				//"spring-boot.ls.java.home": "/usr/lib/jvm/java-17-openjdk-amd64" // For Spring Boot language server
 			},
 			"extensions": [
+				// Intellicode
+				"visualstudioexptteam.vscodeintellic", // IntelliCode
+				"visualstudioexptteam.vscodeintellicode-completions", // IntelliCode Completions
+
+				// Java
 				"vscjava.vscode-java-pack", // Extension Pack for Java
-				"vmware.vscode-boot-dev-pack", // Spring Boot Extension Pack
-				"redhat.fabric8-analytics", // Dependency Analytics
-				"mutantdino.resourcemonitor", // Resource Monitor
+				//"redhat.java", // Language Support for Java by Red Hat
+				//"vscjava.vscode-java-dependency", // Project Manager for Java
+				//"vscjava.vscode-java-debug", // Debugger for Java
+				//"vscjava.vscode-java-test", // Test Runner for Java
+				//"vscjava.vscode-maven", // Maven for Java
+				//"redhat.fabric8-analytics", // Dependency Analytics
+				//"vmware.vscode-boot-dev-pack", // Spring Boot Extension Pack (Too much resource usage)
+
+				// JavaScript
+				"dbaeumer.vscode-eslint", // ESLint
+
+				// MongoDB
 				"mongodb.mongodb-vscode", // MongoDB for VS Code
-				"rangav.vscode-thunder-client" // Thunder Client
+
+				// REST API testing
+				"rangav.vscode-thunder-client", // Thunder Client
+
+				// Tools
+				"mutantdino.resourcemonitor", // Resource Monitor
+				"mhutchie.git-graph", // Git Graph
+				"eamodio.gitlens" // GitLens
 			]
 		}
 	},
