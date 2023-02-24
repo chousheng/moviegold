@@ -1,5 +1,7 @@
 {
     "java.compile.nullAnalysis.mode": "automatic",
     "java.configuration.updateBuildConfiguration": "automatic",
-    "debug.toolBarLocation": "docked"
+    "debug.toolBarLocation": "docked",
+    "thunder-client.saveToWorkspace": true,
+    "thunder-client.sidebar.defaultTab": "Collections"
 }

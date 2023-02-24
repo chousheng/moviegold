@@ -48,7 +48,8 @@
 				"vmware.vscode-boot-dev-pack", // Spring Boot Extension Pack
 				"redhat.fabric8-analytics", // Dependency Analytics
 				"mutantdino.resourcemonitor", // Resource Monitor
-				"mongodb.mongodb-vscode" // MongoDB for VS Code
+				"mongodb.mongodb-vscode", // MongoDB for VS Code
+				"rangav.vscode-thunder-client" // Thunder Client
 			]
 		}
 	},
