@@ -6,7 +6,7 @@ import { Routes, Route } from 'react-router-dom';
 import Home from './components/home/Home.js';
 
 function App() {
-  const [movies, setMovies] = useState();
+  const [movies, setMovies] = useState([]);
 
   const getMovies = async () => {
     try {
@@ -26,11 +26,11 @@ function App() {
     <div className="App">
       <Routes>
         <Route path="/" element={<Layout />}>
-          <Route path="/" element={<Home />}></Route>
+          <Route path="/" element={<Home movies={movies} />}></Route>
         </Route>
       </Routes>
     </div>
   );
 }
 
-export default App;
+export default App
