@@ -24,6 +24,7 @@ const Reviews = ({ getMovieData, movie, reviews, setReviews }) => {
             const updatedReviews = [...reviews, { body: rev.value }]
             rev.value = "";
             setReviews(updatedReviews);
+            console.log(response);
         } catch (err) {
             console.log(err);
         }
