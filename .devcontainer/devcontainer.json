@@ -40,14 +40,14 @@
 				//		"path": "/usr/lib/jvm/java-17" // Hardcoded for now (TODO)
 				//	} 
 				//]
-				"java.sharedIndexes.enabled": "on",
 				"java.jdt.ls.java.home": "/usr/lib/jvm/java-17" // For both the Java language server and the default project JDK
 				//"spring-boot.ls.java.home": "/usr/lib/jvm/java-17" // For Spring Boot language server
 			},
 			"extensions": [
-				// Intellicode
-				"visualstudioexptteam.vscodeintellic", // IntelliCode
-				"visualstudioexptteam.vscodeintellicode-completions", // IntelliCode Completions
+        // Intellisense
+         "christian-kohler.path-intellisense", // Path Intellisense
+				//"visualstudioexptteam.vscodeintellic", // IntelliCode
+				//"visualstudioexptteam.vscodeintellicode-completions", // IntelliCode Completions
 
 				// Java
 				"vscjava.vscode-java-pack", // Extension Pack for Java
@@ -68,6 +68,10 @@
 
 				// REST API testing
 				"rangav.vscode-thunder-client", // Thunder Client
+
+				// Code Formatter
+				"esbenp.prettier-vscode", // Prettier
+				"editorconfig.editorconfig", // EditorConfig for VS Code
 
 				// Tools
 				"mutantdino.resourcemonitor", // Resource Monitor
