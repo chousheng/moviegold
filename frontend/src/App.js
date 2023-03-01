@@ -15,7 +15,7 @@ function App() {
 
   const getMovies = async () => {
     try {
-      const response = await api.get("/api/v1/movies");
+      const response = await api.get('/api/v1/movies');
       console.log(response.data);
       setMovies(response.data);
     } catch (err) {
@@ -32,7 +32,7 @@ function App() {
     } catch (err) {
       console.log(err);
     }
-  }
+  };
 
   useEffect(() => {
     getMovies();
@@ -45,11 +45,14 @@ function App() {
         <Route path="/" element={<Layout />}>
           <Route path="/" element={<Home movies={movies} />}></Route>
           <Route path="/Trailer/:ytTrailerId" element={<Trailer />}></Route>
-          <Route path="/Reviews/:movieId" element={<Reviews getMovieData={getMovieData} movie={movie} reviews={reviews} setReviews={setReviews} />}></Route>
+          <Route
+            path="/Reviews/:movieId"
+            element={<Reviews getMovieData={getMovieData} movie={movie} reviews={reviews} setReviews={setReviews} />}
+          ></Route>
         </Route>
       </Routes>
     </div>
   );
 }
 
-export default App
+export default App;
