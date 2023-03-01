@@ -12,7 +12,7 @@ const Reviews = ({ getMovieData, movie, reviews, setReviews }) => {
 
   useEffect(() => {
     getMovieData(movieId);
-  }, []);
+  }, [getMovieData, movieId]);
 
   const addReview = async (e) => {
     e.preventDefault();
