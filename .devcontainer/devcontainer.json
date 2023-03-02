@@ -62,6 +62,7 @@
 				// JavaScript
 				"dbaeumer.vscode-eslint", // ESLint
 				"dsznajder.es7-react-js-snippets", // ES7+ React/Redux/React-Native snippets
+        "orta.vscode-jest", // Jest
 
 				// MongoDB
 				"mongodb.mongodb-vscode", // MongoDB for VS Code
