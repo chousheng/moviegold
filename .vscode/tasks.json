@@ -2,27 +2,39 @@
   "version": "2.0.0",
   "tasks": [
     {
+      "label": "npm: start - frontend",
       "type": "npm",
       "script": "start",
       "path": "frontend",
-      "label": "npm: start - frontend",
       "options": {
         "env": {
           "BROWSER": "none"
         }
       },
-      "isBackground": true, // This prevents the launch.json to wait for the completion of the task
+      "isBackground": true,
       "problemMatcher": {
-        "owner": "custom", // This is not needed but, required by the problemMatcher Object
+        "owner": "custom",
         "pattern": {
-          "regexp": "^$" // This is not needed but, required by the problemMatcher Object
+          "regexp": "^$"
         },
         "background": {
           "activeOnStart": true,
-          "beginsPattern": "Compiling...", // Signals the begin of the Task
-          "endsPattern": "Compiled .*" // Signals that now the initialization of the task is complete
+          "beginsPattern": "Compiling...",
+          "endsPattern": "Compiled .*"
         }
-      }
+      },
+      "dependsOn": ["npm: install - frontend"]
+    },
+    {
+      "label": "npm: install - frontend",
+      "type":"npm",
+      "script": "install",
+      "path": "frontend",
+      "group": {
+        "kind": "build",
+      },
+      "problemMatcher": [],
+      "detail": "install dependencies from package"
     }
   ]
 }
