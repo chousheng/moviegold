@@ -49,11 +49,6 @@
         //"spring-boot.ls.java.home": "/usr/lib/jvm/java-17" // For Spring Boot language server
       },
       "extensions": [
-        // Intellisense
-        "christian-kohler.path-intellisense", // Path Intellisense
-        //"visualstudioexptteam.vscodeintellic", // IntelliCode
-        //"visualstudioexptteam.vscodeintellicode-completions", // IntelliCode Completions
-
         // Java
         "vscjava.vscode-java-pack", // Extension Pack for Java
         //"redhat.java", // Language Support for Java by Red Hat
@@ -72,6 +67,9 @@
         // MongoDB
         "mongodb.mongodb-vscode", // MongoDB for VS Code
 
+        // Docker
+        "ms-azuretools.vscode-docker", // Docker
+
         // REST API testing
         "rangav.vscode-thunder-client", // Thunder Client
 
@@ -79,29 +77,34 @@
         "esbenp.prettier-vscode", // Prettier
         "editorconfig.editorconfig", // EditorConfig for VS Code
 
-        // Tools
-        "mutantdino.resourcemonitor", // Resource Monitor
-        "mhutchie.git-graph", // Git Graph
-        "eamodio.gitlens", // GitLens
-
-        // Docker
-        "ms-azuretools.vscode-docker", // Docker
-
-        // Spell Checker
-        //"streetsidesoftware.code-spell-checker"
+        // Intellisense
+        "christian-kohler.path-intellisense", // Path Intellisense
+        //"visualstudioexptteam.vscodeintellic", // IntelliCode
+        //"visualstudioexptteam.vscodeintellicode-completions", // IntelliCode Completions
 
         // Live Preview
-        //"ms-vscode.live-server"
+        //"ms-vscode.live-server",
+
+        // Git
+        // "eamodio.gitlens", // GitLens
+        "mhutchie.git-graph", // Git Graph
+        "donjayamanne.githistory", // Git History
+
+        // Code Spell Checker
+        "streetsidesoftware.code-spell-checker",
+
+        // Resource Monitoring
+        "mutantdino.resourcemonitor" // Resource Monitor
       ]
     }
   },
 
-  // Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
-  // "remoteUser": "root"
+  // More info: https://aka.ms/dev-containers-non-root.
+  // "remoteUser": "vscode",
 
-  // Sync container timezone with the host
+  // Additional mounts
   "mounts": [
-    "source=/etc/localtime,target=/etc/localtime,type=bind,readonly"
+    //"source=/etc/localtime,target=/etc/localtime,type=bind,readonly"  // Sync container timezone with the host
     //"source=vscode-extensions,target=/home/vscode/.vscode-server/extensions,type=volume"
   ]
 }
