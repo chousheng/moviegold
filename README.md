@@ -4,7 +4,9 @@ A full-stack movie review app with a backend written in Java (Spring Boot), a fr
 
 ![Screenshot](images/screenshot.png)
 
-This project provides a one-click, ready-to-code development setup using [Dev](https://code.visualstudio.com/docs/devcontainers/containers) [Container](https://containers.dev/) technology, which can be opened using GitHub Codespaces in the cloud or using Visual Studio Code on the local machine (with Docker Desktop and Dev Containers Extension installed). When the dev container is launched, a MongoDB database service will be spun up automatically, thanks to Docker Compose. The dev container also includes an opinionated set of useful Visual Studio Code extensions. Besides, launch.json and tasks.json files are written to allow users to build and run frontend or backend servers conveniently in Visual Studio Code.
+## Why Dev Container?
+
+This project provides a one-click, ready-to-code development setup using [Dev](https://code.visualstudio.com/docs/devcontainers/containers) [Container](https://containers.dev/) technology, which can be opened using GitHub Codespaces in the cloud or using Visual Studio Code on the local machine (with Docker Desktop and Dev Containers Extension installed). When the dev container is launched, a MongoDB database service will be spun up automatically (thanks to Docker Compose). The dev container also includes an opinionated set of useful Visual Studio Code extensions. Besides, launch.json and tasks.json files are written to allow users to build and run frontend or backend servers conveniently in Visual Studio Code. Those features make development easy and avoid wasting time setting up a working, consistent dev environment.
 
 ## Technologies
 
@@ -85,6 +87,10 @@ Open the browser and connect to http://localhost:3000 to play with the app.
 ## Seeding Database
 
 The MongoDB database will be seeded using the script in `db/seed.sh` and the data in `db/seed.json` when the database Docker volume is created.
+
+## CORS Error
+
+People doing full-stack development frequently run into the Cross-Origin Resource Sharing (CORS) error, a security check implemented by browsers when making frontend API requests to the backend. This project takes advantage of the proxy feature of Create React App to make the origin of API requests to the backend server look the same as the frontend app. Thus, the backend does not need to respond with `Access-Control-Allow-Origin: *` in the HTTP header, which is not recommended in production.
 
 ## Dev Container Configuration
 
