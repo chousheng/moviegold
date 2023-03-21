@@ -94,7 +94,7 @@ People doing full-stack development frequently run into the Cross-Origin Resourc
 
 ## REST API testing
 
-The dev container includes Thunder Client extension to test REST APIs without leaving Visual Studio Code. A collection of backend APIs is written in `thunder-tests/thunderclient.json`.
+The dev container includes Thunder Client extension, enabling REST API testing without leaving Visual Studio Code. A collection of backend APIs is written in `thunder-tests/thunderclient.json`.
 
 ## Dev Container configuration
 
