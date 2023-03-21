@@ -1,6 +1,6 @@
-# Movie Gold
+# MovieGold
 
-A full-stack movie review app with a backend written in Java (Spring Boot), a frontend in JavaScript (React), and a MongoDB database using Dev Container and Docker Compose for ease of development.
+A full-stack movie review app with a backend in Java (Spring Boot), a frontend in JavaScript (React), and a MongoDB database using Dev Container and Docker Compose for ease of development.
 
 ![Screenshot](images/screenshot.png)
 
@@ -90,7 +90,11 @@ The MongoDB database will be seeded using the script in `db/seed.sh` and the dat
 
 ## CORS handling
 
-People doing full-stack development frequently run into the Cross-Origin Resource Sharing ([CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS)) error, a security check implemented by browsers when making frontend API requests to the backend. This project takes advantage of the [proxy](https://create-react-app.dev/docs/proxying-api-requests-in-development) feature of Create React App to make the origin of API requests to the backend server look the same as the frontend app. Thus, the backend does not need to respond with `Access-Control-Allow-Origin: *` in the HTTP header, which is not recommended in production.
+People doing full-stack development frequently run into the Cross-Origin Resource Sharing ([CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS)) error, a security check implemented by browsers when making cross-origin frontend API requests to the backend. This project takes advantage of the [proxy](https://create-react-app.dev/docs/proxying-api-requests-in-development) feature of Create React App to make the origin (both the host and the port) of API requests to the backend server the same as the frontend app. Thus, the backend does not need to respond with `Access-Control-Allow-Origin: *` in the HTTP header, which is not recommended in production.
+
+## REST API testing
+
+The dev container includes Thunder Client extension to test REST APIs without leaving Visual Studio Code. A collection of backend APIs is written in `thunder-tests/thunderclient.json`.
 
 ## Dev Container configuration
 
