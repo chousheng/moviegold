@@ -94,7 +94,44 @@ People doing full-stack development frequently run into the Cross-Origin Resourc
 
 ## REST API testing
 
-The dev container includes Thunder Client extension, enabling REST API testing without leaving Visual Studio Code. A collection of backend APIs is written in `thunder-tests/thunderclient.json`.
+The dev container includes [Thunder Client](https://www.thunderclient.com/) extension, enabling REST API testing without leaving Visual Studio Code. A collection of backend APIs is written in `thunder-tests/thunderclient.json`.
+
+## Frontend testing
+
+This project uses [Jest](https://jestjs.io/) as its JavaScript test runner. Files with `.test.js` suffix can be tested. To run all tests, run:
+
+```
+cd frontend
+CI=true npm run test
+```
+
+## Frontend linting
+
+This project uses [ESLint](https://eslint.org/) for JavaScript code linting. To lint all js files, run:
+
+```
+cd frontend/src
+npx eslint . --ext .js
+```
+
+## Backend testing
+
+This project uses [JUnit](https://junit.org/) for Java code testing. To run all tests, run:
+
+```
+cd backend
+./mvnw test
+```
+
+## MongoDB administration
+
+The dev container includes [MongoDB Shell](https://www.mongodb.com/docs/mongodb-shell/), which can be used to test queries and operations directly with the MongoDB database. To connect to the database, run:
+
+```
+mongosh mongodb://root:example@db
+```
+
+The default hostname is `db`, the username is `root`, and the password is `example`. Those settings can be changed in `docker-compose.yml`.
 
 ## Dev Container configuration
 
