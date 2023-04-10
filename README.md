@@ -6,7 +6,7 @@ A full-stack movie review app with a backend in Java (Spring Boot), a frontend i
 
 ## Why Dev Container?
 
-It makes "development environnement as code" possible.
+It makes **development environnement as code** possible.
 
 This project provides a one-click, ready-to-code development setup using [Dev](https://code.visualstudio.com/docs/devcontainers/containers) [Container](https://containers.dev/), which can be opened using GitHub Codespaces in the cloud or using Visual Studio Code on the local machine (with Docker Desktop and Dev Containers extensions installed).
 
@@ -96,7 +96,9 @@ The MongoDB database will be seeded using the script in `db/seed.sh` and the dat
 
 ## CORS handling
 
-People doing full-stack development frequently run into the Cross-Origin Resource Sharing ([CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS)) error, a security check implemented by browsers when making cross-origin frontend API requests to the backend. This project takes advantage of the [proxy](https://create-react-app.dev/docs/proxying-api-requests-in-development) feature of Create React App to make the origin (both the host and the port) of API requests to the backend server the same as the frontend app. Thus, the backend does not need to respond with `Access-Control-Allow-Origin: *` in the HTTP header, which is not recommended in production.
+People doing full-stack development frequently run into the Cross-Origin Resource Sharing ([CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS)) error, a security check implemented by browsers when making cross-origin frontend API requests to the backend.
+
+This project takes advantage of the [proxy](https://create-react-app.dev/docs/proxying-api-requests-in-development) feature of Create React App to make the origin (both the host and the port) of API requests to the backend server the same as the frontend app. Thus, the backend does not need to respond with `Access-Control-Allow-Origin: *` in the HTTP header, which is not recommended in production.
 
 ## REST API testing
 
