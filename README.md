@@ -27,13 +27,13 @@ Those features make development easy and eliminate the need to spend time on set
 
 #### Development setup
 
-On GitHub, click `Code` > `Codespaces` > `Create Codespaces on main`. Or click the badge below:
+On GitHub, click `Code` > `Codespaces` > `Create Codespaces on main`. Or just click the badge below:
 
 [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://github.com/codespaces/new?hide_repo_select=true&ref=main&repo=604053198)
 
 #### Building and running
 
-Wait until all Visual Studio Code extensions are installed and activated. In `Run and Debug` view, select `Backend+Fronted` and press `F5` to run both the backend and frontend servers. In `Ports` panel, find `3000` and select `Open in Browser` to play with the app.
+Wait until all Visual Studio Code extensions are installed and activated. In `Run and Debug` view, select `Backend+Frontend` and press `F5` to run both the backend and frontend servers. In `Ports` panel, find `3000` and select `Open in Browser` to play with the app.
 
 ### Option 2: Using Visual Studio Code with Dev Container
 
