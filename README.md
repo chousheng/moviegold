@@ -6,13 +6,13 @@ A full-stack movie review app with a backend in Java (Spring Boot), a frontend i
 
 ## Why Dev Container?
 
-It makes **development environnement as code** possible.
+It makes **development environment as code** possible.
 
 This project provides a one-click, ready-to-code development setup using [Dev](https://code.visualstudio.com/docs/devcontainers/containers) [Container](https://containers.dev/), which can be opened using GitHub Codespaces in the cloud or using Visual Studio Code on the local machine (with Docker Desktop and Dev Containers extensions installed).
 
 When the dev container is launched, a MongoDB database service will be spun up automatically (thanks to Docker Compose). The dev container also includes an opinionated set of useful Visual Studio Code extensions. Besides, launch.json and tasks.json files are written to allow users to build and run frontend or backend servers conveniently in Visual Studio Code.
 
-Those features make development easy and eliminate the need to spend time on setting up a working, consistent development environment.
+Those features make development easy and eliminate the need to spend time setting up a working, consistent development environment.
 
 ## Technologies
 
@@ -33,7 +33,7 @@ On GitHub, click `Code` > `Codespaces` > `Create Codespaces on main`. Or just cl
 
 #### Building and running
 
-Wait until all Visual Studio Code extensions are installed and activated. In `Run and Debug` view, select `Backend+Frontend` and press `F5` to run both the backend and frontend servers. In `Ports` panel, find `3000` and select `Open in Browser` to play with the app.
+Wait until all Visual Studio Code extensions are installed and activated. Then, in `Run and Debug` view, select `Backend+Frontend` and press `F5` to run both the backend and frontend servers. In `Ports` panel, find `3000` and select `Open in Browser` to play with the app.
 
 ### Option 2: Using Visual Studio Code with Dev Container
 
