@@ -28,8 +28,8 @@
   // Use 'postCreateCommand' to run commands after the container is created.
   // "postCreateCommand": "java -version",
 
-  // Fix git "dubious ownership" error
-  "postStartCommand": "git config --global --add safe.directory ${containerWorkspaceFolder}",
+  // Fix git "dubious ownership" error (only when using VirtioFS?)
+  // "postStartCommand": "git config --global --add safe.directory ${containerWorkspaceFolder}",
 
   // Configure tool-specific properties.
   "customizations": {
