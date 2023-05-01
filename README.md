@@ -10,9 +10,9 @@ It makes **development environment as code** possible.
 
 This project provides a one-click, ready-to-code development setup using [Dev](https://code.visualstudio.com/docs/devcontainers/containers) [Container](https://containers.dev/), which can be opened using GitHub Codespaces in the cloud or using Visual Studio Code on the local machine (with Docker Desktop and Dev Containers extensions installed).
 
-When the dev container is launched, a MongoDB database service will be spun up automatically (thanks to Docker Compose). The dev container also includes an opinionated set of useful Visual Studio Code extensions. Besides, launch.json and tasks.json files are written to allow users to build and run frontend or backend servers conveniently in Visual Studio Code.
+When the dev container is launched, a MongoDB database service will be spun up automatically (thanks to Docker Compose). The dev container also includes an opinionated set of useful Visual Studio Code extensions. Besides, launch.json and tasks.json files are written to allow users to build and run frontend or backend servers directly in Visual Studio Code.
 
-Those features make development easy and eliminate the need to spend time setting up a working, consistent development environment.
+Those features facilitate the development and eliminate the need to spend time setting up a working, consistent development environment.
 
 ## Technologies
 
@@ -27,7 +27,7 @@ Those features make development easy and eliminate the need to spend time settin
 
 #### Development setup
 
-On GitHub, click `Code` > `Codespaces` > `Create Codespaces on main`. Or just click the badge below:
+On GitHub, click `Code` > `Codespaces` > `Create Codespaces on main`. Or click the badge below:
 
 [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://github.com/codespaces/new?hide_repo_select=true&ref=main&repo=604053198)
 
