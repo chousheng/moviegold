@@ -12,7 +12,7 @@ This project provides a one-click, ready-to-code development setup using [Dev](h
 
 When the dev container is launched, a MongoDB database service will be spun up automatically (thanks to Docker Compose). The dev container also includes an opinionated set of useful Visual Studio Code extensions. Besides, launch.json and tasks.json files are written to allow users to build and run frontend or backend servers directly in Visual Studio Code.
 
-Those features facilitate the development and eliminate the need to spend time setting up a working, consistent development environment.
+Those features improve the development experience, eliminating the need to spend time setting up a working, consistent development environment.
 
 ## Technologies
 
